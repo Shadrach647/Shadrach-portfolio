@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="formoooTaskDetailsttt_Metadata.xml" Type="http://schemas.microsoft.com/office/access/2005/04/template/object-metadata" Target="properties/formoooTaskDetailsttt_Metadata.xml"/><Relationship Id="formoooTaskDetailsttt_Properties.axl" Type="http://schemas.microsoft.com/office/2007/relationships/ObjectProperties" Target="properties/formoooTaskDetailsttt_Properties.axl"/></Relationships>

@@ -1,0 +1,221 @@
+﻿<Root><SoapMethod>http://schemas.microsoft.com/sharepoint/soap/AddList</SoapMethod>
+	<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+		<Body>
+			<AddList xmlns="http://schemas.microsoft.com/sharepoint/soap/">
+				<listName>Tasks</listName>
+				<description/>
+				<templateID>100</templateID>
+			</AddList>
+		</Body>
+	</Envelope>
+	<SoapMethod>http://schemas.microsoft.com/sharepoint/soap/UpdateList</SoapMethod><soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body>
+			<UpdateList xmlns="http://schemas.microsoft.com/sharepoint/soap/">
+				<listName>{BC5B1011-A346-43D8-A949-A99C845DEF26}</listName><listProperties>
+					<List PreserveEmptyValues="TRUE" StrictTypeCoercion="TRUE" EnforceDataValidation="TRUE"/>
+				</listProperties><newFields>
+					<Fields>
+						<Method ID="228" AddToView="">
+							<Field DisplayName="TaskTitle" Type="Text"/>
+						</Method>
+						<Method ID="229" AddToView="">
+							<Field DisplayName="Priority" Type="Choice" FillInChoice="TRUE">
+								<CHOICES>
+									<CHOICE>(1) High</CHOICE>
+									<CHOICE>(2) Normal</CHOICE>
+									<CHOICE>(3) Low</CHOICE>
+								</CHOICES>
+							</Field>
+						</Method>
+						<Method ID="230" AddToView="">
+							<Field DisplayName="Status" Type="Choice" FillInChoice="TRUE">
+								<CHOICES>
+									<CHOICE>0</CHOICE>
+									<CHOICE>Not Started</CHOICE>
+									<CHOICE>10</CHOICE>
+									<CHOICE>In Progress</CHOICE>
+									<CHOICE>100</CHOICE>
+									<CHOICE>Completed</CHOICE>
+									<CHOICE>-10</CHOICE>
+									<CHOICE>Deferred</CHOICE>
+									<CHOICE>50</CHOICE>
+									<CHOICE>Waiting</CHOICE>
+								</CHOICES>
+							</Field>
+						</Method>
+					</Fields>
+				</newFields><updateFields>
+					<Fields>
+						<Method ID="231">
+							<Field Type="Text" Calculated="FALSE" Name="Title" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" ColName="nvarchar1" DisplayName="SharePointTitle" Hidden="TRUE" FromBaseType="FALSE" Required="FALSE"/>
+						</Method>
+						<Method ID="232">
+							<Field Type="Attachments" Calculated="FALSE" ColName="tp_HasAttachment" RowOrdinal="0" Name="Attachments" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Attachments" FromBaseType="TRUE" DisplayName="Attachments"/>
+						</Method>
+						<Method ID="233">
+							<Field Type="User" Calculated="FALSE" ColName="tp_Editor" RowOrdinal="0" ReadOnly="TRUE" List="UserInfo" Name="Editor" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Editor" FromBaseType="TRUE" Version="1" DisplayName="SharePointEditor" Hidden="FALSE"/>
+						</Method>
+						<Method ID="234">
+							<Field Type="User" Calculated="FALSE" ColName="tp_Author" RowOrdinal="0" ReadOnly="TRUE" List="UserInfo" Name="Author" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Author" FromBaseType="TRUE" Version="1" DisplayName="SharePointAuthor" Hidden="FALSE"/>
+						</Method>
+						<Method ID="235">
+							<Field Type="DateTime" Calculated="FALSE" ColName="tp_Modified" RowOrdinal="0" ReadOnly="TRUE" Name="Modified" StorageTZ="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Modified" FromBaseType="TRUE" Version="1" DisplayName="SharePointModifiedDate" Hidden="FALSE"/>
+						</Method>
+						<Method ID="236">
+							<Field Type="DateTime" Calculated="FALSE" ColName="tp_Created" RowOrdinal="0" ReadOnly="TRUE" Name="Created" StorageTZ="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Created" FromBaseType="TRUE" Version="1" DisplayName="SharePointCreatedDate" Hidden="FALSE"/>
+						</Method>
+						<Method ID="237">
+							<Field Type="Computed" Calculated="FALSE" ReadOnly="TRUE" Name="Edit" Sortable="FALSE" Filterable="FALSE" DisplayName="Edit" ClassInfo="Icon" AuthoringInfo="(link to edit item)" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Edit" FromBaseType="TRUE" Hidden="TRUE"/>
+						</Method>
+						<Method ID="238">
+							<Field Type="Computed" Calculated="FALSE" DisplayName="Content Type" ReadOnly="TRUE" Name="ContentType" DisplaceOnUpgrade="TRUE" RenderXMLUsingPattern="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ContentType" Group="_Hidden" PITarget="MicrosoftWindowsSharePointServices" PIAttribute="ContentTypeID" FromBaseType="TRUE" Hidden="TRUE"/>
+						</Method>
+						<Method ID="239">
+							<Field Type="Text" Calculated="FALSE" ColName="tp_UIVersionString" RowOrdinal="0" ReadOnly="TRUE" Name="_UIVersionString" DisplaceOnUpgrade="TRUE" DisplayName="Version" CanToggleHidden="TRUE" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="_UIVersionString" FromBaseType="TRUE" Hidden="TRUE"/>
+						</Method>
+						<Method ID="240">
+							<Field Type="Computed" Calculated="FALSE" ReadOnly="TRUE" Name="DocIcon" DisplaceOnUpgrade="TRUE" DisplayName="Type" TextOnly="TRUE" ClassInfo="Icon" AuthoringInfo="(icon linked to document)" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="DocIcon" FromBaseType="TRUE" Hidden="TRUE"/>
+						</Method>
+						<Method ID="241">
+							<Field Type="Lookup" Calculated="FALSE" Name="ItemChildCount" DisplaceOnUpgrade="TRUE" ReadOnly="TRUE" ShowInFileDlg="FALSE" DisplayName="Item Child Count" List="Docs" FieldRef="ID" ShowField="ItemChildCount" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ItemChildCount" FromBaseType="TRUE" Hidden="TRUE"/>
+						</Method>
+						<Method ID="242">
+							<Field Type="Lookup" Calculated="FALSE" Name="FolderChildCount" DisplaceOnUpgrade="TRUE" ReadOnly="TRUE" ShowInFileDlg="FALSE" DisplayName="Folder Child Count" List="Docs" FieldRef="ID" ShowField="FolderChildCount" JoinColName="DoclibRowId" JoinRowOrdinal="0" JoinType="INNER" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="FolderChildCount" FromBaseType="TRUE" Hidden="TRUE"/>
+						</Method>
+					</Fields>
+				</updateFields><deleteFields>
+					<Fields>
+					</Fields>
+				</deleteFields><listVersion>0</listVersion></UpdateList>
+		</soap:Body></soap:Envelope><SoapMethod>http://schemas.microsoft.com/sharepoint/soap/UpdateList</SoapMethod><soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body>
+			<UpdateList xmlns="http://schemas.microsoft.com/sharepoint/soap/">
+				<listName>{BC5B1011-A346-43D8-A949-A99C845DEF26}</listName><listProperties>
+					<List/>
+				</listProperties><newFields>
+					<Fields>
+						<Method ID="243" AddToView="">
+							<Field DisplayName="Description" Type="Note" RichText="FALSE"/>
+						</Method>
+						<Method ID="244" AddToView="">
+							<Field DisplayName="StartDate" Type="DateTime"/>
+						</Method>
+						<Method ID="245" AddToView="">
+							<Field DisplayName="DueDate" Type="DateTime"/>
+						</Method>
+						<Method ID="246" AddToView="">
+							<Field DisplayName="PercentComplete" Type="Number"/>
+						</Method>
+						<Method ID="247" AddToView="">
+							<Field DisplayName="_OldID" Type="Number" Decimals="0"/>
+						</Method>
+					</Fields>
+				</newFields><updateFields>
+					<Fields>
+						<Method ID="248">
+							<Field Type="Counter" Calculated="FALSE" ColName="tp_ID" RowOrdinal="0" ReadOnly="TRUE" Name="ID" PrimaryKey="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="ID" FromBaseType="TRUE" DisplayName="ID"/>
+						</Method>
+					</Fields>
+				</updateFields><deleteFields>
+					<Fields>
+					</Fields>
+				</deleteFields><listVersion>0</listVersion></UpdateList>
+		</soap:Body></soap:Envelope><SoapMethod>http://schemas.microsoft.com/sharepoint/soap/UpdateList</SoapMethod><soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body>
+			<UpdateList xmlns="http://schemas.microsoft.com/sharepoint/soap/">
+				<listName>{BC5B1011-A346-43D8-A949-A99C845DEF26}</listName><listProperties>
+					<List/>
+				</listProperties><newFields>
+					<Fields>
+						<Method ID="249" AddToView="">
+							<Field DisplayName="Active" Type="Calculated" Calculated="TRUE" ResultType="Boolean">
+								<Formula>=Not(SQL.In(Status,"100","-10"))</Formula>
+							</Field>
+						</Method>
+					</Fields>
+				</newFields><updateFields>
+					<Fields>
+					</Fields>
+				</updateFields><deleteFields>
+					<Fields>
+					</Fields>
+				</deleteFields><listVersion>0</listVersion></UpdateList>
+		</soap:Body></soap:Envelope><SoapMethod>http://schemas.microsoft.com/sharepoint/soap/UpdateList</SoapMethod><soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body>
+			<UpdateList xmlns="http://schemas.microsoft.com/sharepoint/soap/">
+				<listName>{BC5B1011-A346-43D8-A949-A99C845DEF26}</listName><listProperties>
+					<List Direction="ltr"><Validation Message="The Start Date must be less than the Due Date.">=StartDate&lt;=DueDate</Validation>
+					</List>
+				</listProperties><newFields>
+					<Fields>
+					</Fields>
+				</newFields><updateFields>
+					<Fields>
+					</Fields>
+				</updateFields><deleteFields>
+					<Fields>
+					</Fields>
+				</deleteFields><listVersion>0</listVersion></UpdateList>
+		</soap:Body></soap:Envelope><SoapMethod>http://schemas.microsoft.com/sharepoint/soap/UpdateList</SoapMethod><soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body>
+			<UpdateList xmlns="http://schemas.microsoft.com/sharepoint/soap/">
+				<listName>{BC5B1011-A346-43D8-A949-A99C845DEF26}</listName><listProperties>
+					<List/>
+				</listProperties><newFields>
+					<Fields>
+					</Fields>
+				</newFields><updateFields>
+					<Fields>
+						<Method ID="250">
+							<Field DisplayName="TaskTitle" Type="Text" Required="TRUE" MaxLength="255"/>
+						</Method>
+						<Method ID="251">
+							<Field DisplayName="Priority" Type="Choice" Required="TRUE" FillInChoice="FALSE" MaxLength="255">
+								<CHOICES>
+									<CHOICE>(1) High</CHOICE>
+									<CHOICE>(2) Normal</CHOICE>
+									<CHOICE>(3) Low</CHOICE>
+								</CHOICES>
+								<DefaultFormula>="(2) Normal"</DefaultFormula>
+								<DefaultFormulaValue></DefaultFormulaValue>
+							</Field>
+						</Method>
+						<Method ID="252">
+							<Field DisplayName="Status" Type="Choice" Required="TRUE" FillInChoice="FALSE" MaxLength="255">
+								<CHOICES>
+									<CHOICE>0</CHOICE>
+									<CHOICE>Not Started</CHOICE>
+									<CHOICE>10</CHOICE>
+									<CHOICE>In Progress</CHOICE>
+									<CHOICE>100</CHOICE>
+									<CHOICE>Completed</CHOICE>
+									<CHOICE>-10</CHOICE>
+									<CHOICE>Deferred</CHOICE>
+									<CHOICE>50</CHOICE>
+									<CHOICE>Waiting</CHOICE>
+								</CHOICES>
+								<DefaultFormula>="0"</DefaultFormula>
+								<DefaultFormulaValue></DefaultFormulaValue>
+							</Field>
+						</Method>
+						<Method ID="253">
+							<Field DisplayName="Description" Type="Note" RichText="FALSE" AppendOnly="FALSE"/>
+						</Method>
+						<Method ID="254">
+							<Field DisplayName="StartDate" Type="DateTime" Format="DateOnly">
+								<Validation Message="Value must be greater than 1/1/1900.">=StartDate&gt;=DateTime(1900,1,1,0,0,0)</Validation>
+							</Field>
+						</Method>
+						<Method ID="255">
+							<Field DisplayName="DueDate" Type="DateTime" Format="DateOnly">
+								<Validation Message="Value must be greater than 1/1/1900.">=DueDate&gt;=DateTime(1900,1,1,0,0,0)</Validation>
+							</Field>
+						</Method>
+						<Method ID="256">
+							<Field DisplayName="PercentComplete" Type="Number" Required="TRUE" Percentage="TRUE" Decimals="0">
+								<DefaultFormula>=0</DefaultFormula>
+								<DefaultFormulaValue></DefaultFormulaValue>
+								<Validation Message="Must be between 0% and 100%">=And.Db(PercentComplete&gt;=0,PercentComplete&lt;=1)</Validation>
+							</Field>
+						</Method>
+					</Fields>
+				</updateFields><deleteFields>
+					<Fields>
+					</Fields>
+				</deleteFields><listVersion>0</listVersion></UpdateList>
+		</soap:Body></soap:Envelope></Root>
