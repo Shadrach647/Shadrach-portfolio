@@ -6,6 +6,13 @@
 
 /*Custom properties, Update these for your own design*/
 
+.shadows-into-light-regular {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
 :root {
     --ff-primary:'Shadows Into Light', serif; 
     --ff-secondary: 'Source Code Pro', monospace;
@@ -339,6 +346,7 @@ header {
            "subtitle img"
            "text img";
            grid-column-gap: 2em;
+           /* font-family: Shadow into light; */
       } 
 .section_title_about{
     grid-area: title;
